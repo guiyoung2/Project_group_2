@@ -20,14 +20,14 @@ a {
 .weather {
   width: 50%;
   height: 100vh;
-  background: url("./image/날씨1.png") no-repeat center center;
+  background: url("./image/weather.png") no-repeat center center;
   /* background-size: cover; */
   background-size: contain;
   position: relative;
 }
 .calculator {
   width: 50%;
-  background: url("./image/계산기1.png") no-repeat center center;
+  background: url("./image/calculator.png") no-repeat center center;
   /* background-size: cover; */
   background-size: contain;
   position: relative;
