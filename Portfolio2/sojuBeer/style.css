@@ -1,0 +1,134 @@
+@charset "utf-8";
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-y: hidden;
+  /* position: relative; */
+  font-family: "SUITE-Regular";
+  width: 100%;
+  height: 100%;
+}
+.bg {
+  background-image: url(./image/background.jpeg);
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.br {
+  display: block;
+}
+.container {
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+}
+header {
+  /* position: absolute; */
+  /* padding-top: 100px; */
+  /* padding-top: 10vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 30vh;
+  flex-direction: column;
+  /* line-height: 20vh; */
+  /* left: 50%; */
+  /* top: 10%; */
+  /* transform: translate(-50%, -10%); */
+}
+header > h2 {
+  margin-bottom: 7px;
+  font-size: 30px;
+}
+header > h3 {
+  margin-bottom: 4px;
+  font-size: 22px;
+}
+header > p {
+  font-size: 16px;
+}
+.choose {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 45vh;
+}
+.choose > a {
+  display: block;
+  width: 25%;
+  background: #efc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25vh;
+  text-indent: -9999px;
+  position: relative;
+}
+.soju {
+  background: url("./image/soju.png") no-repeat center center;
+  background-size: contain;
+  display: block;
+  transform: scale(0.8);
+}
+.beer {
+  background: url("./image/beer.png") no-repeat center center;
+  background-size: contain;
+  display: block;
+}
+.info {
+  height: 25vh;
+  /* line-height: 10vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.info > p {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+}
+.info > span {
+  font-size: 14px;
+}
+
+.y-font {
+  color: rgb(249, 111, 104);
+}
+
+@media screen and (max-width: 600px) {
+  header > h2 {
+    font-size: 20px;
+  }
+  header > h3 {
+    font-size: 16px;
+  }
+  header > p {
+    font-size: 13px;
+  }
+  .info > p {
+    font-size: 18px;
+  }
+  .info > span {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://www.twosome.co.kr/resources/images/common/favicon.ico"
+    />
+    <script src="./js/data.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>투썸</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>A TWOSOME PLACE <span>COFFEE & DESSERT</span></h1>
+      </header>
+      <div class="wrapper">
+        <nav>
+          <ul class="menu">
+            <li class="newBt">
+              New
+              <div class="sub new-sub">
+                <ul>
+                  <li>New</li>
+                </ul>
+              </div>
+            </li>
+            <li class="coffeeDrinkBt">
+              커피/음료
+              <div class="sub coffeeDrink-sub">
+                <ul>
+                  <li class="coffeeBt">커피</li>
+                  <li class="drinkBt">음료</li>
+                  <li class="teeBt">티/티라떼</li>
+                </ul>
+              </div>
+            </li>
+            <li class="dessertBt">
+              디저트
+              <div class="sub dessert-sub">
+                <ul>
+                  <li class="wholecakeBt">홀케이크</li>
+                  <li class="pieceofcakeBt">조각케이크</li>
+                  <li class="macaronBt">마카롱</li>
+                  <li class="cookieAndsnackBt">쿠키 & 스낵</li>
+                </ul>
+              </div>
+            </li>
+            <li class="foodBt">
+              푸드
+              <div class="sub food-sub">
+                <ul>
+                  <li>푸드</li>
+                </ul>
+              </div>
+            </li>
+            <li class="goodsBt">
+              상품
+              <div class="sub goods-sub">
+                <ul>
+                  <li>상품</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <section class="new">
+          <ul class="newWrap itemWrap"></ul>
+        </section>
+        <section class="coffeeDrink">
+          <ul class="coffeeWrap itemWrap"></ul>
+          <ul class="drinkWrap itemWrap"></ul>
+          <ul class="teeWrap itemWrap"></ul>
+        </section>
+        <section class="dessert">
+          <ul class="wholecakeWrap itemWrap"></ul>
+          <ul class="pieceofcakeWrap itemWrap"></ul>
+          <ul class="macaronWrap itemWrap"></ul>
+          <ul class="cookieAndsnackWrap itemWrap"></ul>
+        </section>
+        <section class="food">
+          <ul class="foodWrap itemWrap"></ul>
+        </section>
+        <section class="goods">
+          <ul class="goodsWrap itemWrap"></ul>
+        </section>
+      </div>
+      <footer>
+        <div class="listWrapper">
+          <div class="list-top">
+            <div class="shop-wrap">
+              <div class="shopwrapper">
+                <span class="icon">커피</span>
+                <span class="shoptxt">매장</span>
+              </div>
+            </div>
+            <h2>주문내역(order list)</h2>
+          </div>
+          <div class="listWrap">
+            <ul class="itemList"></ul>
+          </div>
+        </div>
+        <div class="manual">
+          <div class="countWrap">
+            <p><span>총수량 : </span> <span class="totalcount"></span></p>
+            <p><span>총금액 : </span> <span class="totalmoney"></span></p>
+          </div>
+          <div class="payWrap">
+            <span class="trash">aaa</span>
+            <span class="pay">결제하기(Pay)</span>
+            <span class="bacord">aaa</span>
+          </div>
+          <a href="../index.html">
+            <div class="reset">처음으로(Reset)</div>
+          </a>
+        </div>
+      </footer>
+      <!-- 밑에 결제 창은 미완성입니다 ! -->
+      <!-- <div class="pay-wrap">
+        <div class="grey_bg"></div>
+        <div class="pay-area">
+          <h3>옵션 선택 (options)</h3>
+          <div class="payItem_wrap">
+            <div class="item-box"></div>
+            <div class="item-options"></div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/order.js"></script>
+  </body>
+</html>

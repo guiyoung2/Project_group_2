@@ -1,0 +1,584 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding: 2%;
+  background: #e8e8e8;
+
+  header {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    background: #fff;
+    margin: 20px 0;
+    h1 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 50px;
+      background: url("../image/logo_text.png") no-repeat center center;
+      background-size: contain;
+      text-indent: -9999px;
+      transition: all 0.5s;
+    }
+  }
+  .wrapper {
+    nav {
+      width: 100%;
+      background: #fff;
+      position: relative;
+      .menu {
+        display: flex;
+        li {
+          width: 100px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bold;
+          transition: all 0.5s;
+          cursor: pointer;
+          .sub {
+            // display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: rgb(70, 69, 69);
+            ul {
+              display: flex;
+              li {
+                font-weight: normal;
+                color: #fff;
+              }
+            }
+          }
+          .coffeeDrink-sub,
+          .dessert-sub,
+          .food-sub,
+          .goods-sub {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .coffeeDrink,
+    .dessert,
+    .food,
+    .goods {
+      display: none;
+    }
+    .newWrap {
+      margin-bottom: 300px;
+    }
+    .newWrap,
+    .coffeeWrap,
+    .drinkWrap,
+    .teeWrap,
+    .wholecakeWrap,
+    .pieceofcakeWrap,
+    .macaronWrap,
+    .cookieAndsnackWrap,
+    .foodWrap,
+    .goodsWrap {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1%;
+      margin-top: 50px;
+      li {
+        width: 18%;
+        margin: 1%;
+        height: auto;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        background: #fff;
+        padding-top: 20px;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        .itemName {
+          font-weight: normal;
+          font-size: 16px;
+          margin: 10px;
+          height: 40px;
+          padding-top: 20px;
+          transition: all 0.5s;
+        }
+        .itemPrice {
+          margin: 10px;
+          transition: all 0.5s;
+        }
+        .itemImage {
+          width: 80px;
+          height: 80px;
+          // margin: 20px auto;
+          margin: 0 auto;
+          padding: 20px;
+          border-radius: 50%;
+          transition: all 0.5s;
+        }
+      }
+    }
+    .drinkWrap,
+    .teeWrap,
+    .pieceofcakeWrap,
+    .macaronWrap,
+    .cookieAndsnackWrap {
+      display: none;
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    // height: 30%;
+    background: #dadada;
+    padding-bottom: 20px;
+    // height: 300px;
+    .listWrapper {
+      width: 60%;
+      height: 320px;
+      // background: #dfe;
+      .list-top {
+        height: 40px;
+        // background: #fff;
+        line-height: 40px;
+        position: relative;
+        text-align: center;
+        .shop-wrap {
+          position: absolute;
+          width: 25%;
+          background: rgb(199, 41, 41);
+          .shopwrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.5s;
+            .shoptxt {
+              font-weight: bold;
+              color: #fff;
+            }
+            .icon {
+              text-indent: -9999px;
+              width: 30px;
+              height: 30px;
+              background: url("../image/hall.png") no-repeat center center;
+              background-size: contain;
+              filter: invert(100%) sepia(0%) saturate(19%) hue-rotate(341deg)
+                brightness(105%) contrast(106%);
+              transition: all 0.5s;
+            }
+          }
+        }
+        h2 {
+          width: 74%;
+          margin-left: 25%;
+          font-size: 20px;
+          background: #fff;
+          transition: all 0.5s;
+        }
+        h2::before {
+          position: absolute;
+          content: "";
+          display: inline-block;
+          width: 0px;
+          height: 0px;
+          left: 25%;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-left: 20px solid rgb(199, 41, 41); /* 화살표 */
+        }
+      }
+      .listWrap {
+        width: 99%;
+        height: calc(100% - 40px);
+        background: #f8f7f6;
+        overflow: scroll;
+        .itemList {
+          li {
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.5s;
+            button {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .manual {
+      width: 40%;
+      .countWrap {
+        background: #fff;
+        padding: 20px 10px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        p {
+          font-size: 18px;
+          padding: 0 10px;
+          display: flex;
+          justify-content: space-between;
+          transition: all 0.5s;
+        }
+        p:nth-child(1) {
+          span:nth-child(2):after {
+            content: " 개";
+          }
+        }
+        p:nth-child(2) {
+          span:nth-child(2):after {
+            content: " 원";
+          }
+        }
+      }
+      .payWrap {
+        text-align: center;
+        .trash,
+        .bacord {
+          width: 25%;
+          height: 60px;
+          text-indent: -9999px;
+          cursor: pointer;
+          transition: all 0.5s;
+        }
+        .pay {
+          width: 75%;
+          height: 120px;
+          line-height: 120px;
+          cursor: pointer;
+          float: right;
+          background: rgb(199, 41, 41);
+          color: #fff;
+          font-weight: bold;
+          font-size: 20px;
+          transition: all 0.5s;
+        }
+        .trash {
+          float: left;
+          background: #949393 url("../image/trash.png") no-repeat center center;
+          background-size: 25%;
+          filter: invert(100%) sepia(0%) saturate(19%) hue-rotate(341deg)
+            brightness(105%) contrast(106%);
+        }
+        // .pay {
+        //   float: right;
+        //   background: rgb(199, 41, 41);
+        //   color: #fff;
+        //   font-weight: bold;
+        //   font-size: 20px;
+        // }
+        .bacord {
+          float: left;
+          background: #555555 url("../image/barcode.png") no-repeat center
+            center;
+          background-size: 25%;
+          filter: invert(100%) sepia(0%) saturate(19%) hue-rotate(341deg)
+            brightness(105%) contrast(106%);
+        }
+      }
+      .reset {
+        clear: both;
+        height: 60px;
+        text-align: center;
+        color: #fff;
+        background: #302f2f;
+        line-height: 60px;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+// 상품 item 크기
+@media screen and (max-width: 900px) {
+  .container {
+    .wrapper {
+      .newWrap,
+      .coffeeWrap,
+      .drinkWrap,
+      .teeWrap,
+      .wholecakeWrap,
+      .pieceofcakeWrap,
+      .macaronWrap,
+      .cookieAndsnackWrap,
+      .foodWrap,
+      .goodsWrap {
+        li {
+          .itemName {
+            font-size: 14px;
+          }
+          .itemPrice {
+            font-size: 15px;
+          }
+          .itemImage {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    footer {
+      .listWrapper {
+        .listWrap {
+          .itemList {
+            li {
+              font-size: 13px;
+              button {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+      .manual {
+        .payWrap {
+          .trash {
+            background: #949393 url("../image/trash.png") no-repeat center
+              center;
+            background-size: 40%;
+          }
+          .bacord {
+            background: #555555 url("../image/barcode.png") no-repeat center
+              center;
+            background-size: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 630px) {
+  .container {
+    .wrapper {
+      nav {
+        .menu {
+          li {
+            width: 80px;
+            font-size: 14px;
+            height: 45px;
+            line-height: 45px;
+          }
+        }
+      }
+    }
+
+    footer {
+      .listWrapper {
+        .list-top {
+          .shop-wrap {
+            .shopwrapper {
+              .shoptxt {
+                font-size: 13px;
+              }
+              .icon {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+          h2 {
+            font-size: 14px;
+          }
+          h2::before {
+            left: 24.9%;
+          }
+        }
+      }
+    }
+
+    footer {
+      .listWrapper {
+        .listWrap {
+          .itemList {
+            li {
+              font-size: 12px;
+              button {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+      .manual {
+        .countWrap {
+          p {
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+        .payWrap {
+          .pay {
+            font-size: 16px;
+          }
+        }
+        a {
+          .reset {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  // 상품 item 크기
+  .container {
+    .wrapper {
+      .newWrap,
+      .coffeeWrap,
+      .drinkWrap,
+      .teeWrap,
+      .wholecakeWrap,
+      .pieceofcakeWrap,
+      .macaronWrap,
+      .cookieAndsnackWrap,
+      .foodWrap,
+      .goodsWrap {
+        li {
+          .itemName {
+            font-size: 14px;
+          }
+          .itemPrice {
+            font-size: 15px;
+          }
+          .itemImage {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 상품 item 크기
+@media screen and (max-width: 520px) {
+  .container {
+    .wrapper {
+      .newWrap,
+      .coffeeWrap,
+      .drinkWrap,
+      .teeWrap,
+      .wholecakeWrap,
+      .pieceofcakeWrap,
+      .macaronWrap,
+      .cookieAndsnackWrap,
+      .foodWrap,
+      .goodsWrap {
+        li {
+          .itemName {
+            font-size: 12px;
+          }
+          .itemPrice {
+            font-size: 13px;
+          }
+          .itemImage {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  //로고 크기
+  .container header h1 {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container {
+    footer {
+      .listWrapper {
+        .listWrap {
+          .itemList {
+            li {
+              font-size: 10px;
+              button {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+      .manual {
+        .countWrap {
+          p {
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+        .payWrap {
+          .pay {
+            font-size: 14px;
+          }
+        }
+        a {
+          .reset {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  // 상품 item 크기
+  .container {
+    .wrapper {
+      .newWrap,
+      .coffeeWrap,
+      .drinkWrap,
+      .teeWrap,
+      .wholecakeWrap,
+      .pieceofcakeWrap,
+      .macaronWrap,
+      .cookieAndsnackWrap,
+      .foodWrap,
+      .goodsWrap {
+        li {
+          .itemName {
+            font-size: 10px;
+          }
+          .itemPrice {
+            font-size: 11px;
+          }
+          .itemImage {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 결제 창 금액이랑 총개수 사이즈 해야함!!!

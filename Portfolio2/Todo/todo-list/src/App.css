@@ -1,0 +1,272 @@
+@charset "utf-8";
+@font-face {
+  font-family: "TAEBAEKmilkyway";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  position: relative;
+  padding: 70px 0 200px;
+}
+.bg {
+  position: absolute;
+  width: 100vw;
+  background: url("../public/image/bgbg.jpeg") no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  top: 0;
+  z-index: -99;
+}
+.container {
+  width: 90vw;
+  /* max-height: 90vh; */
+  /* border: 2px solid #000; */
+  border: 4px solid #fff;
+  box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  background: rgb(243, 236, 253);
+}
+.Todo-box {
+  width: 68%;
+  min-height: 80vh;
+  margin-left: 4%;
+  position: relative;
+}
+
+.add-info-box {
+  padding-top: 35px;
+  width: 24%;
+  /* background: #fec; */
+  display: flex;
+  flex-direction: column;
+  font-family: "TAEBAEKmilkyway";
+  font-weight: bold;
+}
+.clock {
+  height: 15%;
+  background: #fcd;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px 1px #fcd;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.today {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.week {
+  font-size: 36px;
+}
+.day {
+  margin-bottom: 15px;
+}
+.now-ampm {
+  font-size: 18px;
+}
+.now-time {
+  font-size: 26px;
+  margin: 0 5px;
+}
+.seconds {
+  padding: 10px;
+}
+.weather {
+  /* height: 30%; */
+  padding: 10% 0;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px 1px skyblue;
+  background: skyblue;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.weather-box {
+  height: 100%;
+}
+.city {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.city-name {
+  font-size: 24px;
+}
+.temp {
+  font-size: 28px;
+}
+.weather-img {
+  text-align: center;
+}
+.weather-img > svg {
+  width: 8rem;
+  height: 8rem;
+}
+.sky {
+  text-align: right;
+  width: 85%;
+  /* padding-left: 10%; */
+}
+.info-text {
+  /* height: 45%; */
+  padding: 10% 0;
+  line-height: 32px;
+  text-align: center;
+  background: #fda;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px 1px #fda;
+  box-sizing: border-box;
+}
+
+.add-todo-button {
+  /* position: fixed; */
+  position: absolute;
+  /* right: 0; */
+  right: -100px;
+  bottom: 0;
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  font-size: 5rem;
+  color: #72a0f6;
+  /* color: #f67280; */
+  text-align: center;
+  line-height: 100px;
+}
+@media screen and (max-width: 1000px) {
+  .week {
+    font-size: 24px;
+  }
+  .day {
+    font-size: 15px;
+  }
+  .time-box {
+    font-size: 14px;
+  }
+  .now-time {
+    font-size: 24px;
+  }
+  .city-name {
+    font-size: 20px;
+  }
+  .temp {
+    font-size: 20px;
+  }
+  .weather-img > svg {
+    width: 6rem;
+    height: 6rem;
+  }
+  .sky {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .today {
+    flex-direction: column;
+  }
+  .week {
+    font-size: 20px;
+  }
+  .day {
+    font-size: 13px;
+    text-align: center;
+  }
+  .time-box {
+    font-size: 13px;
+  }
+  .now-time {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .week {
+    font-size: 16px;
+  }
+  .day {
+    font-size: 11px;
+  }
+  .now-ampm {
+    font-size: 14px;
+  }
+  .time-box {
+    font-size: 11px;
+  }
+  .now-time {
+    font-size: 16px;
+  }
+  .city-name {
+    font-size: 16px;
+  }
+  .temp {
+    font-size: 16px;
+  }
+  .weather-img > svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .sky {
+    font-size: 14px;
+  }
+  .info-text {
+    font-size: 14px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .list-num {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .week {
+    font-size: 14px;
+  }
+  .day {
+    font-size: 10px;
+  }
+  .now-ampm {
+    font-size: 10px;
+  }
+  .time-box {
+    font-size: 10px;
+  }
+  .now-time {
+    font-size: 12px;
+  }
+  .city-name {
+    font-size: 12px;
+  }
+  .temp {
+    font-size: 12px;
+  }
+  .weather-img > svg {
+    width: 3rem;
+    height: 3rem;
+  }
+  .sky {
+    font-size: 13px;
+  }
+  .info-text {
+    font-size: 11px;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .list-num {
+    font-size: 25px;
+  }
+}

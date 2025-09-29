@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scale=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 상단 주소창 제거 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <title>BonoBono Play</title>
+    <link rel="stylesheet" href="game.css" />
+    <script>
+      $(function () {
+        let randomNum;
+        let second = 60; /* 플레이 시간 */
+        let score = 0; // 점수
+        let timer1;
+        let timer2;
+        let clickable = false; // 연속 클릭 방지 상태변수
+        let wD = 0;
+
+        function ramdomTarget() {
+          $(".box_area").children("div").off("click");
+          randomNum = Math.floor(Math.random() * 9) + 1;
+          let randomPorori = Math.floor(Math.random() * 2) + 1;
+
+          let boxChoice = $(".box" + randomNum);
+          boxChoice.append(
+            $('<img src="img/target' + randomPorori + '.png" alt="">')
+          );
+
+          setTimeout(function () {
+            boxChoice.find("img").addClass("active");
+            clickable = true;
+          }, 50);
+          setTimeout(function () {
+            let img = $(".box_area").find("img").filter(".active");
+
+            img.removeClass("active");
+            clickable = false;
+          }, 1000);
+          setTimeout(function () {
+            boxChoice.find("img").remove();
+          }, 1500);
+          $(".box_area")
+            .children("div")
+            .on("click", function () {
+              if (
+                $(this).find("img").attr("src").substr(4, 1) == "t" &&
+                clickable == true
+              ) {
+                $(this).find("img").attr("src", "img/no.png");
+                // score++;
+                wD += 8.4;
+                if (wD >= 100) {
+                  wD = 100;
+                  // $(".play_score").text(score * 20);
+                  score += 20;
+                } else {
+                  // $(".play_score").text(score * 10);
+                  score += 10;
+                }
+                $(".gage_bar").css("width", wD + "%");
+                $(".play_score").text(score);
+                second++;
+                $(".time").text(second);
+              }
+            });
+        }
+
+        timer1 = setInterval(ramdomTarget, 2000);
+        function random2() {
+          let ran = Math.floor(Math.random() * 9) + 1;
+          let faker = Math.floor(Math.random() * 2) + 1;
+
+          let boxChoice2 = $(".box" + ran);
+          boxChoice2.append($('<img src="img/faker' + faker + '.png" alt="">'));
+
+          setTimeout(function () {
+            boxChoice2.find("img").addClass("active");
+            clickable = true;
+          }, 50);
+          setTimeout(function () {
+            $(".box_area").find("img").filter(".active").removeClass("active");
+            console.log("hide");
+            clickable = false;
+          }, 1000);
+          setTimeout(function () {
+            boxChoice2.find("img").remove();
+          }, 1500);
+          $(".box_area")
+            .children("div")
+            .on("click", function () {
+              if (
+                $(this).find("img").attr("src").substr(4, 1) == "f" &&
+                clickable == true
+              ) {
+                wD = 0;
+                $(this)
+                  .find("img")
+                  .attr("src", "img/faker" + faker + "_1.png");
+                score -= 10;
+                $(".play_score").text(score);
+                second--;
+                $(".time").text(second);
+                $(".gage_bar").css("width", wD + "%");
+              }
+            });
+
+          if (randomNum == ran) {
+            return ran;
+          }
+        }
+        timer2 = setInterval(random2, 2000);
+
+        function countdown() {
+          second--;
+          $(".time").text(second);
+          if (second <= 0) {
+            clearInterval(counter);
+            clearInterval(timer1);
+            clearInterval(timer2);
+            $(".play").hide();
+            $(".end").show();
+            $(".end").find(".score").text(score);
+          }
+        }
+        counter = setInterval(countdown, 1000);
+
+        $(".end>.end_btns>.again").on("click", function () {
+          second = 60;
+          score = 0;
+          timer1 = setInterval(ramdomTarget, 2000);
+          timer2 = setInterval(random2, 2000);
+          counter = setInterval(countdown, 1000);
+          $(".play").show();
+          $(".play").find(".play_score").text(score);
+          $(".play").find(".time").text(second);
+          $(".end").hide();
+        });
+
+        $(".end>.end_btns>.home").on("click", function () {
+          window.location.href = "bono_main.html";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="jogea_area">
+        <div class="gage">
+          <div class="gage_box">
+            gage
+            <p class="gage_bar">&nbsp;</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="play">
+      <div class="play_area">
+        <div class="box_area">
+          <div class="forest"></div>
+          <div class="box1">
+            <!-- <img src="" alt="" /> -->
+            <!-- <img src="img/target1.png" alt="" /> -->
+          </div>
+        </div>
+        <div class="box_area">
+          <div class="forest"></div>
+          <div class="box2"></div>
+        </div>
+        <div class="box_area">
+          <div class="forest"></div>
+          <div class="box3"></div>
+        </div>
+        <div class="box_area">
+          <div class="forest"></div>
+          <div class="box4"></div>
+        </div>
+        <div class="box_area">
+          <div class="forest"></div>
+          <div class="box5"></div>
+        </div>
+        <div class="box_area">
+          <div class="forest"></div>
+          <div class="box6"></div>
+        </div>
+        <div class="box_area">
+          <div class="forest"></div>
+          <div class="box7"></div>
+        </div>
+        <div class="box_area">
+          <div class="forest"></div>
+          <div class="box8"></div>
+        </div>
+        <div class="box_area">
+          <div class="forest"></div>
+          <div class="box9"></div>
+        </div>
+      </div>
+      <p class="play_score">&nbsp;0</p>
+      <div class="time">60</div>
+      <img src="img/nurburi3.png" alt="" class="play_nuburi" />
+    </section>
+    <section class="end">
+      <h2 class="game_over">GAME OVER</h2>
+      <img src="img/porori7.png" alt="" class="end_img" />
+      <p class="score">0</p>
+      <div class="end_btns">
+        <button type="button" class="again">다시 하기</button>
+        <button type="button" class="home">홈 으로</button>
+      </div>
+    </section>
+  </body>
+</html>

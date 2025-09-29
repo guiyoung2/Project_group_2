@@ -1,0 +1,499 @@
+@charset "utf-8";
+@font-face {
+  font-family: "HakgyoansimWoojuR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "HakgyoansimWoojuR";
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+ul {
+  list-style: none;
+}
+.br {
+  display: block;
+}
+.container {
+  position: relative;
+}
+.bg_img {
+  background: url("../image/bg2.jpg") no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  z-index: -10;
+}
+.icon_wrap {
+  text-align: center;
+  padding-top: 75px;
+}
+.icon_wrap > h2 {
+  height: 70px;
+  font-size: 30px;
+  line-height: 70px;
+}
+.page {
+  display: flex;
+  position: absolute;
+  top: 35px;
+  right: 60px;
+  gap: 20px;
+}
+.home,
+.soju {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home_icon {
+  background: url("../image/home.png") no-repeat center center;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background-size: contain;
+}
+
+.soju_icon {
+  background: url("../image/soju.png") no-repeat center center;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-size: contain;
+}
+.beer_icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("../image/beer.png") no-repeat center center;
+  background-size: contain;
+}
+.icon_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-indent: -9999px;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+.icon_list > li {
+  width: 76px;
+  height: 76px;
+  box-sizing: border-box;
+}
+.icon_list > li > a {
+  margin: 0 auto;
+  border: 1px solid #333;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  display: block;
+  box-sizing: border-box;
+}
+.icon_list > li:nth-child(1) > a {
+  background: #fff url("../image/cass_icon.png") no-repeat center center;
+  background-size: contain;
+  transform: scale(0.85);
+}
+.icon_list > li:nth-child(2) > a {
+  background: url("../image/terra_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.icon_list > li:nth-child(3) > a {
+  background: url("../image/kelly_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.icon_list > li:nth-child(4) > a {
+  background: url("../image/hite_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.icon_list > li:nth-child(5) > a {
+  background: url("../image/kloud_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.icon_list > li:nth-child(6) > a {
+  background: url("../image/filite_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.icon_list > li:nth-child(7) > a {
+  background: url("../image/mango_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.icon_list > li:nth-child(8) > a {
+  background: url("../image/max_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.icon_list > li:nth-child(9) > a {
+  background: url("../image/toktok_icon.png") no-repeat center center;
+  background-size: contain;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.content {
+  width: 100vw;
+  height: 400px;
+}
+.grey_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #898989;
+  z-index: 5;
+  opacity: 0.3;
+  transition: all 0.7s;
+}
+.grey_bg:hover {
+  opacity: 0;
+}
+.cass {
+  position: relative;
+  background: url("../image/cass.png") no-repeat 80% center;
+  background-size: 13%;
+}
+.cass_bg_c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(167, 173, 250);
+  background: linear-gradient(
+    90deg,
+    rgba(167, 173, 250, 1) 0%,
+    rgba(64, 90, 237, 1) 46%,
+    rgba(26, 25, 207, 1) 100%
+  );
+}
+
+.terra {
+  position: relative;
+  background-image: url(../image/terra_bg.jpeg);
+  background-size: 100% 100%;
+}
+.kelly {
+  position: relative;
+  background-image: url(../image/kelly_bg.jpeg);
+  background-size: 100% 100%;
+}
+.hite {
+  position: relative;
+  background: url("../image/hite_bg.png") no-repeat center center;
+  background-position-x: -10%;
+  background-position-y: 70%;
+}
+.kloud {
+  position: relative;
+  background-image: url(../image/kloud_bg.jpeg);
+  background-size: cover;
+  background-position-y: 100%;
+}
+.filite {
+  position: relative;
+  background: url("../image/filite_bg1.png") no-repeat 80% center;
+  background-size: 23%;
+}
+.filite_bg_c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(177, 216, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(177, 216, 251, 1) 0%,
+    rgba(119, 194, 240, 0.48365283613445376) 46%,
+    rgba(55, 131, 252, 0.5256696428571428) 100%
+  );
+}
+.mango {
+  position: relative;
+  background: url("../image/mango_bg.png") no-repeat 83% center;
+  background-size: 20%;
+}
+.mango_bg_c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(240, 250, 167);
+  background: linear-gradient(
+    90deg,
+    rgba(240, 250, 167, 1) 0%,
+    rgba(232, 237, 129, 0.48365283613445376) 46%,
+    rgba(249, 240, 13, 0.5256696428571428) 100%
+  );
+}
+.max {
+  position: relative;
+  background: url("../image/max_bg.jpeg") no-repeat center right;
+  background-position-x: 10%;
+  background-position-y: 80%;
+}
+.toktok {
+  position: relative;
+  background: url("../image/toktok_bg.png") no-repeat 85% center;
+}
+.toktok_bg_c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(251, 177, 212);
+  background: linear-gradient(
+    90deg,
+    rgba(251, 177, 212, 1) 0%,
+    rgba(240, 119, 179, 0.48365283613445376) 46%,
+    rgba(255, 83, 183, 0.5256696428571428) 100%
+  );
+}
+.meahwa {
+  position: relative;
+  background: rgb(249, 194, 233);
+}
+.meahwa_img {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  transform: scale(0.8);
+  background: url("../image/meahwa2.png") no-repeat right 100px center;
+}
+.info_box {
+  width: 45%;
+  height: 250px;
+  background: rgb(247, 243, 243);
+  margin-top: 110px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+.soju_name {
+  display: block;
+  text-indent: -9999px;
+  position: absolute;
+  top: 6%;
+  left: 6%;
+  transform: translate(-6%, -6%);
+}
+.cass_logo {
+  width: 80px;
+  height: 80px;
+  background: url("../image/cass_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.terra_logo {
+  width: 80px;
+  height: 80px;
+  background: url("../image/terra_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.kelly_logo {
+  width: 80px;
+  height: 80px;
+  background: url("../image/kelly_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.hite_logo {
+  width: 80px;
+  height: 80px;
+  background: url("../image/hite_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.kloud_logo {
+  width: 80px;
+  height: 80px;
+  background: url("../image/kloud_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.filite_logo {
+  width: 80px;
+  height: 80px;
+  background: url("../image/filite_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.mango_logo {
+  width: 80px;
+  height: 80px;
+  background: url("../image/mango_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.max_logo {
+  width: 80px;
+  height: 80px;
+  background: url("../image/max_icon.png") no-repeat center center;
+  background-size: contain;
+}
+.toktok_logo {
+  width: 80px;
+  height: 80px;
+  background: url("../image/toktok_icon.png") no-repeat center center;
+  background-size: contain;
+}
+
+table {
+  width: 100%;
+  height: 250px;
+}
+th {
+  font-size: 14px;
+  width: 20%;
+}
+td {
+  font-size: 12px;
+}
+.bottle_box {
+  background: url("../image/bottle.png") no-repeat right center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 15px;
+}
+.pett_box {
+  background: url("../image/pett.png") no-repeat right center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 15px;
+}
+.pocket_box {
+  background: url("../image/pocket.png") no-repeat right center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 15px;
+}
+.pack_box {
+  background: url("../image/pack.png") no-repeat right center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 15px;
+}
+.can_box {
+  background: url("../image/can.png") no-repeat right center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 15px;
+}
+.draft_box {
+  background: url("../image/draft.png") no-repeat right center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 15px;
+}
+.upButton {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  bottom: 40px;
+  right: 60px;
+  width: 75px;
+  height: 75px;
+  background: url("../image/upbutton.png") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  text-indent: -9999px;
+  z-index: 5000;
+}
+.btn_on {
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (max-width: 1000px) {
+  .icon_list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .icon_list > li {
+    width: 20%;
+  }
+  .page {
+    right: 40px;
+  }
+  .info_box {
+    width: 65%;
+    margin-top: 110px;
+    margin-left: 50px;
+  }
+  tr,
+  td,
+  th {
+    font-size: 13px;
+  }
+  .upButton {
+    width: 65px !important;
+    height: 65px !important;
+  }
+}
+@media screen and (max-width: 570px) {
+  .icon_list > li > a {
+    width: 50px;
+    height: 50px;
+  }
+  .icon_wrap > h2 {
+    height: 70px;
+    font-size: 20px;
+    line-height: 70px;
+  }
+  .page {
+    right: 20px;
+  }
+  .page > a {
+    font-size: 12px;
+  }
+  .info_box {
+    width: 85%;
+    margin-top: 110px;
+    margin-left: 30px;
+  }
+  tr,
+  td,
+  th {
+    font-size: 11px;
+  }
+  .br {
+    display: inline-block;
+  }
+  .upButton {
+    width: 45px !important;
+    height: 45px !important;
+    bottom: 30px;
+    right: 20px;
+  }
+}
