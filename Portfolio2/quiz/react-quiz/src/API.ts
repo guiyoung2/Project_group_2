@@ -1,6 +1,4 @@
 import { shuffleArray } from "./utils";
-import axios from "axios";
-import { useEffect, useState } from "react";
 
 export type Question = {
   catagory: string;
@@ -13,17 +11,15 @@ export type Question = {
 
 export type QuestionState = Question & { answers: string[] };
 
-export const geographyQ = async () => {
-  // const tt = fetch("/test.json").then(response => response.json());
-  // const quiz = await (await fetch("/data/quiz.json")).json();
-  const quiz = await (
-    await fetch(
-      "https://raw.githubusercontent.com/guiyoung2/quiz/main/data/quiz.json"
-    )
-  ).json();
-  // .then(data => console.log(data.지리));
-  // console.log(quiz.지리);
+const QUIZ_DATA_URL = "/data/quiz.json";
 
+const fetchQuizData = async () => {
+  const res = await fetch(QUIZ_DATA_URL);
+  return res.json();
+};
+
+export const geographyQ = async () => {
+  const quiz = await fetchQuizData();
   return quiz.지리.map((question: Question) => ({
     ...question,
     answers: shuffleArray([
@@ -33,11 +29,7 @@ export const geographyQ = async () => {
   }));
 };
 export const commonQ = async () => {
-  const quiz = await (
-    await fetch(
-      "https://raw.githubusercontent.com/guiyoung2/quiz/main/data/quiz.json"
-    )
-  ).json();
+  const quiz = await fetchQuizData();
   return quiz.상식.map((question: Question) => ({
     ...question,
     answers: shuffleArray([
@@ -47,11 +39,7 @@ export const commonQ = async () => {
   }));
 };
 export const idiomQ = async () => {
-  const quiz = await (
-    await fetch(
-      "https://raw.githubusercontent.com/guiyoung2/quiz/main/data/quiz.json"
-    )
-  ).json();
+  const quiz = await fetchQuizData();
   return quiz.사자성어.map((question: Question) => ({
     ...question,
     answers: shuffleArray([
@@ -61,11 +49,7 @@ export const idiomQ = async () => {
   }));
 };
 export const conversationQ = async () => {
-  const quiz = await (
-    await fetch(
-      "https://raw.githubusercontent.com/guiyoung2/quiz/main/data/quiz.json"
-    )
-  ).json();
+  const quiz = await fetchQuizData();
   return quiz.영어회화.map((question: Question) => ({
     ...question,
     answers: shuffleArray([
